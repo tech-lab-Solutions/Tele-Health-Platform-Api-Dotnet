@@ -6,4 +6,10 @@ obj/
 *.suo
 *.db
 *.log
-.env
+PatientService.Api/Logs/log-20251009.txt
+PatientService.Api/Logs/log-20251009.txt
+temp_auto_push.bat
+temp_interactive_push.bat
+.gitignore
+config.bat
+node_modules
