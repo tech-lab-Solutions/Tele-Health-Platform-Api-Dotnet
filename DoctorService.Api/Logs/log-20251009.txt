@@ -1,0 +1,1 @@
+2025-10-09 18:55:41.616 +05:30 [ERR] An error occurred using the connection to database 'DoctorDb' on server 'tcp://localhost:5432'.
