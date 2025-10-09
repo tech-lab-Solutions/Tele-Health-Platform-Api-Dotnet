@@ -6,4 +6,7 @@ obj/
 *.suo
 *.db
 *.log
-.env
+PatientService.Api/Logs/log-20251009.txt
+PatientService.Api/Logs/log-20251009.txt
+config.bat
+node_modules
