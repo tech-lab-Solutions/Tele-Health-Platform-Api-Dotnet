@@ -1,0 +1,25 @@
+2025-10-09 11:16:46.433 +05:30 [WRN] Overriding address(es) 'http://localhost:5166'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-09 11:42:06.732 +05:30 [WRN] Overriding address(es) 'http://localhost:5166'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-09 11:43:05.724 +05:30 [WRN] Overriding address(es) 'http://localhost:5166'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-09 11:48:51.602 +05:30 [WRN] Overriding address(es) 'http://localhost:5166'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-09 11:51:32.364 +05:30 [WRN] HTTP/2 is not enabled for 127.0.0.1:5166. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2025-10-09 11:51:32.369 +05:30 [WRN] HTTP/2 is not enabled for [::1]:5166. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2025-10-09 11:52:00.123 +05:30 [WRN] Overriding address(es) 'http://localhost:5166'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-09 11:52:00.209 +05:30 [WRN] HTTP/2 is not enabled for 127.0.0.1:5166. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2025-10-09 11:52:00.228 +05:30 [WRN] HTTP/2 is not enabled for [::1]:5166. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2025-10-09 11:55:44.447 +05:30 [ERR] Error when executing service method 'CreatePatient'.
+System.FormatException: String '' was not recognized as a valid DateTime.
+   at lambda_method5(Closure, Object)
+   at Mapster.TypeAdapter.Adapt[TDestination](Object source, TypeAdapterConfig config)
+   at Mapster.TypeAdapter.Adapt[TDestination](Object source)
+   at PatientService.Api.Services.PatientGrpcService.CreatePatient(CreatePatientRequest request, ServerCallContext context) in C:\TelehealthPlatform\PatientService.Api\Services\PatientGrpcService.cs:line 17
+   at Grpc.Shared.Server.UnaryServerMethodInvoker`3.AwaitInvoker(Task`1 invokerTask, GrpcActivatorHandle`1 serviceHandle)
+   at Grpc.Shared.Server.UnaryServerMethodInvoker`3.AwaitInvoker(Task`1 invokerTask, GrpcActivatorHandle`1 serviceHandle)
+   at Grpc.AspNetCore.Server.Internal.CallHandlers.UnaryServerCallHandler`3.HandleCallAsyncCore(HttpContext httpContext, HttpContextServerCallContext serverCallContext)
+   at Grpc.AspNetCore.Server.Internal.CallHandlers.ServerCallHandlerBase`3.<HandleCallAsync>g__AwaitHandleCall|8_0(HttpContextServerCallContext serverCallContext, Method`2 method, Task handleCall)
+2025-10-09 12:12:38.570 +05:30 [WRN] Overriding address(es) 'http://localhost:5166'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-09 12:12:38.628 +05:30 [WRN] HTTP/2 is not enabled for 127.0.0.1:5166. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2025-10-09 12:12:38.641 +05:30 [WRN] HTTP/2 is not enabled for [::1]:5166. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2025-10-09 16:28:10.031 +05:30 [WRN] Overriding address(es) 'http://localhost:5166'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2025-10-09 16:28:10.121 +05:30 [WRN] HTTP/2 is not enabled for 127.0.0.1:5166. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.
+2025-10-09 16:28:10.138 +05:30 [WRN] HTTP/2 is not enabled for [::1]:5166. The endpoint is configured to use HTTP/1.1 and HTTP/2, but TLS is not enabled. HTTP/2 requires TLS application protocol negotiation. Connections to this endpoint will use HTTP/1.1.

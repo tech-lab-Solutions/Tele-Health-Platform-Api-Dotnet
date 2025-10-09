@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+option csharp_namespace = "UserService.Api";
+
+import "google/protobuf/empty.proto";
+
+service UserGrpc {
+  rpc CreateUser (CreateUserRequest) returns (CreateUserResponse);
+  rpc GetUsers (google.protobuf.Empty) returns (GetUsersResponse);
+  rpc UpdateUser (UpdateUserRequest) returns (UpdateUserResponse);
+  rpc DeleteUser (DeleteUserRequest) returns (DeleteUserResponse);
+}
+
+message CreateUserRequest {
+  string firstName = 1;
+  string lastName = 2;
+  string email = 3;
+  string phone = 4;
+  UserType type = 5;
+}
+
+message CreateUserResponse {
+  string message = 1;
+}
+
+message UpdateUserRequest {
+  int32 userId = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string email = 4;
+  string phone = 5;
+  UserType type = 6;
+}
+
+message UpdateUserResponse {
+  string message = 1;
+}
+
+message DeleteUserRequest {
+  int32 userId = 1;
+}
+
+message DeleteUserResponse {
+  string message = 1;
+}
+
+message UserDto {
+  int32 userId = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string email = 4;
+  string phone = 5;
+  UserType type = 6;
+}
+
+message GetUsersResponse {
+  repeated UserDto Users = 1;
+}
+
+enum UserType {
+  USER_TYPE_UNSPECIFIED = 0; 
+  PATIENT = 1;
+  DOCTOR = 2;
+  TECHNICIAN = 3;
+}

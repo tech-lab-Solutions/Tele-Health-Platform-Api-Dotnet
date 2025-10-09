@@ -1,0 +1,88 @@
+syntax = "proto3";
+
+option csharp_namespace = "PatientService.Api";
+
+import "google/protobuf/empty.proto";
+
+service PatientGrpc {
+  rpc CreatePatient (CreatePatientRequest) returns (CreatePatientResponse);
+  rpc GetPatients (google.protobuf.Empty) returns (GetPatientsResponse);
+  rpc UploadPatientPhoto (UploadPatientPhotoRequest) returns (UploadPatientPhotoResponse);
+  rpc UpdatePatient(UpdatePatientRequest) returns (UpdatePatientResponse);
+  rpc GetPatientById (GetPatientByIdRequest) returns (GetPatientByIdResponse);
+}
+
+message CreatePatientRequest {
+  string firstName = 1;
+  string lastName = 2;
+  string gender = 3;
+  string dateOfBirth = 4;
+  int32 age = 5;
+  string email = 6;
+  string primaryPhone = 7;
+  string secondaryPhone = 8;
+  string address = 9;
+  string bloodGroup = 10;
+  float height = 11;
+  float weight = 12;
+}
+message UpdatePatientRequest {
+  int32 id = 1;             
+  string firstName = 2;
+  string lastName = 3;
+  string gender = 4;
+  string dateOfBirth = 5;
+  int32 age = 6;
+  string email = 7;
+  string primaryPhone = 8;
+  string secondaryPhone = 9;
+  string address = 10;
+  string bloodGroup = 11;
+  float height = 12;
+  float weight = 13;
+}
+
+message UpdatePatientResponse {
+  string message = 1;
+}
+
+message CreatePatientResponse {
+  string message = 1;
+}
+
+message UploadPatientPhotoRequest {
+  int32 patientId = 1;  
+  bytes photo = 2;      
+}
+
+message UploadPatientPhotoResponse {
+  string message = 1;    
+}
+
+message PatientDto {
+  int32 id = 1;             
+  string firstName = 2;
+  string lastName = 3;
+  string gender = 4;
+  string dateOfBirth = 5;
+  int32 age = 6;
+  string email = 7;
+  string primaryPhone = 8;
+  string secondaryPhone = 9;
+  string address = 10;
+  string bloodGroup = 11;
+  float height = 12;
+  float weight = 13;
+}
+
+message GetPatientsResponse {
+  repeated PatientDto patients = 1;
+}
+
+message GetPatientByIdRequest {
+  int32 id = 1;
+}
+
+message GetPatientByIdResponse {
+  PatientDto patient = 1;
+}
